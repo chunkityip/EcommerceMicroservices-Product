@@ -9,11 +9,9 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.testcontainers.containers.MongoDBContainer;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 // To avoid duplicate part 8080
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ProductServiceTest {
+class ProductServiceContainerTest {
 
     @ServiceConnection
     static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0.5");
